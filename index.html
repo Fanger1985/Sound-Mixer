@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - TheFanger Sound Mixer 2.2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Mixer Visual with Waveforms and Time Counter</title>
+<link rel="stylesheet" href="style.css">
+<script src="wavesurfer.min.js"></script>
+</head>
+<body>
+
+<center><h1>TheFanger Audio Mixer OFV1.0</h1></center>
+<div class="container">
+  <div id="colorBox" class="color-box">
+    <div class="track-info left">
+      <button class="load-track-btn" onclick="document.getElementById('fileInputLeft').click()">Load Track</button>
+      <input type="file" id="fileInputLeft" class="file-input" accept="audio/*" onchange="loadTrack(this, 'left')">
+      <p id="trackNameLeft" class="track-name"></p>
+      <div id="waveformLeft" class="waveform"></div>
+      <input type="range" id="seekLeft" class="seek-slider" min="0" max="1" step="0.01" value="0">
+      <div class="time-info" id="timeInfoLeft">
+        <span id="currentTimeLeft">00:00</span> / <span id="totalTimeLeft">00:00</span>
+      </div>
+    </div>
+    <div class="track-info right">
+      <button class="load-track-btn" onclick="document.getElementById('fileInputRight').click()">Load Track</button>
+      <input type="file" id="fileInputRight" class="file-input" accept="audio/*" onchange="loadTrack(this, 'right')">
+      <p id="trackNameRight" class="track-name"></p>
+      <div id="waveformRight" class="waveform"></div>
+      <input type="range" id="seekRight" class="seek-slider" min="0" max="1" step="0.01" value="0">
+      <div class="time-info" id="timeInfoRight">
+        <span id="currentTimeRight">00:00</span> / <span id="totalTimeRight">00:00</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <button id="playLeft" class="play-pause-btn">Play</button>
+  <input type="range" id="colorSlider" min="0" max="100" value="50" class="slider">
+  <button id="playRight" class="play-pause-btn">Play</button>
+</div>
+
+<div class="volume-controls">
+<div class="control-group">
+  <input type="range" id="volumeLeft" class="volume-slider" min="0" max="100" value="100" orient="vertical">
+  <input type="range" id="speedLeft" class="speed-slider" min="0.5" max="2" value="1" step="0.01" orient="vertical">
+  <button id="normalizeSpeedLeft" class="normalize-btn">Normalize</button>
+</div>
+<div class="control-group">
+  <input type="range" id="volumeRight" class="volume-slider" min="0" max="100" value="100" orient="vertical">
+  <input type="range" id="speedRight" class="speed-slider" min="0.5" max="2" value="1" step="0.01" orient="vertical">
+  <button id="normalizeSpeedRight" class="normalize-btn">Normalize</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://unpkg.com/wavesurfer.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
